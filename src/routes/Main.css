@@ -88,6 +88,10 @@
   font-weight: 300;
 }
 
+.main-factor-list {
+  padding-left: 30px;
+}
+
 .main-factor-item {
   font-size: 16px;
   text-align: left;
