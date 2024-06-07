@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function ColumnPost(props) {
   return (
     <article className="column-post">
-      <Link>
+      <Link to={"/post/" + props.id}>
         <figure className="column-post-image">
           {
             props?.imagePath ? <img src={props.imagePath} alt="column" /> : null

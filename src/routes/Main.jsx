@@ -25,14 +25,14 @@ function Main(props) {
       </section>
       <section className="main-column-container">
         <h3 className="main-column-container-title"><span className="main-user-name">OOO</span>님에게 추천드리는 조언 칼럼</h3>
-        <ColumnPost />
-        <ColumnPost />
-        <ColumnPost />
-        <ColumnPost />
-        <ColumnPost />
-        <ColumnPost />
-        <ColumnPost />
-        <ColumnPost />
+        <ColumnPost id={1} />
+        <ColumnPost id={2} />
+        <ColumnPost id={3} />
+        <ColumnPost id={4} />
+        <ColumnPost id={5} />
+        <ColumnPost id={6} />
+        <ColumnPost id={7} />
+        <ColumnPost id={8} />
       </section>
       <div className="main-background"></div>
     </main>
