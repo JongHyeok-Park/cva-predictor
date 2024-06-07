@@ -3,4 +3,32 @@
   padding-top: 20px;
   min-height: 100dvh;
   background-color: #0077B6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-logo {
+  width: 316px;
+  height: 59.14px;
+  background-image: url('../assets/image/logo.png');
+  margin: auto;
+  margin-top: 248px;
+  margin-bottom: 300px;
+}
+
+.login-login-button {
+  width: 283px;
+  height: 42px;
+  background-image: url('../assets/image/login_button.png');
+  border: none;
+  margin: auto;
+}
+
+.login-policy {
+  margin: auto;
+  margin-top: 19px;
+  color: white;
+  text-decoration: none;
 }
