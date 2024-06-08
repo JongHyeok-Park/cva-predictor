@@ -18,17 +18,24 @@
   margin-bottom: 300px;
 }
 
-.login-login-button {
+.login-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-button {
   width: 283px;
   height: 42px;
   background-image: url('../assets/image/login_button.png');
   border: none;
   margin: auto;
+  margin-bottom: 19px;
 }
 
 .login-policy {
   margin: auto;
-  margin-top: 19px;
   color: white;
   text-decoration: none;
+  font-size: 14px;
 }
