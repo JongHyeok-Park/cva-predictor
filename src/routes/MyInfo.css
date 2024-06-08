@@ -1,0 +1,64 @@
+.myinfo {
+  padding: 0 20px;
+  padding-top: 20px;
+  min-height: 100dvh;
+}
+
+.myinfo-current-section {
+  font-size: 18px;
+}
+
+.myinfo-current-section h1 {
+  font-size: 25px;
+  text-align: left;
+}
+
+.myinfo-nim {
+  font-weight: lighter;
+}
+
+.myinfo-date-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.myinfo-current-title {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  color: #7D7D7D;
+}
+
+.myinfo-date {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.myinfo-update {
+  margin-left: auto;
+  color: blue;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.myinfo-table {
+  width: 100%;
+  background-color: #D3EBF9;
+  border-radius: 10px;
+  margin: auto;
+  padding: 18px;
+}
+
+.myinfo-table th {
+  font-weight: normal;
+}
+
+.myinfo-table td {
+  font-weight: bolder;
+  text-align: left;
+}
