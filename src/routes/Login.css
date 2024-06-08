@@ -12,7 +12,6 @@
 .login-logo {
   width: 316px;
   height: 59.14px;
-  background-image: url('../assets/image/logo.png');
   margin: auto;
   margin-top: 248px;
   margin-bottom: 300px;
@@ -27,10 +26,12 @@
 .login-button {
   width: 283px;
   height: 42px;
-  background-image: url('../assets/image/login_button.png');
   border: none;
   margin: auto;
   margin-bottom: 19px;
+  cursor: pointer;
+  background: none;
+  padding: 0;
 }
 
 .login-policy {
