@@ -1,0 +1,22 @@
+.top-article {
+  background-color: #0077B6;
+  height: 65px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  vertical-align: center;
+}
+  
+.top-logo {
+  width: 42px;
+  height: 38px;
+}
+
+.top-text {
+  font-size: 30px;
+  color: white;
+  text-align: right;
+}

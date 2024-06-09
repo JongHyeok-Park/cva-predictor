@@ -1,0 +1,24 @@
+.history-of-health {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: auto;
+  margin-bottom: 17px;
+}
+
+.history-mark {
+  width: 75px;
+  height: 75px;
+  float: left;
+  margin-right: 10px;
+}
+
+.history-date {
+  font-size: 16pt;
+  margin: 5px;
+}
+
+.history-detail {
+  font-size: 12pt;
+  margin: 5px;
+}
