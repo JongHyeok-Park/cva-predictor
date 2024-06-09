@@ -1,5 +1,6 @@
 import './MyInfo.css';
 import { Link } from "react-router-dom";
+import Top from "../components/top/Top";
 import HelathHistory from "../components/history/HealthHistory";
 import dangerImage from '../assets/image/danger.png';
 import safeImage from '../assets/image/safe.png';
@@ -7,6 +8,7 @@ import safeImage from '../assets/image/safe.png';
 function MyInfo(props) {
   return (
     <main className="myinfo">
+      <Top title="내 정보" />
       <section className="myinfo-current-section">
         <h1>한승규<span className="myinfo-nim"> 님</span></h1>
         <div className="myinfo-date-container">
