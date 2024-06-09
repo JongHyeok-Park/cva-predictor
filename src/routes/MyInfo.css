@@ -2,6 +2,8 @@
   padding: 0 20px;
   padding-top: 20px;
   min-height: 100dvh;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .myinfo-current-section {
@@ -60,5 +62,19 @@
 
 .myinfo-table td {
   font-weight: bolder;
+  text-align: left;
+}
+
+.myinfo-divider {
+  border: 0;
+  height: 1px;
+  background: #D7D7D7;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.myinfo-history-title {
+  color: #7D7D7D;
+  font-size: 18px;
   text-align: left;
 }

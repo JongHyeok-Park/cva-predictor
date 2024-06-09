@@ -1,6 +1,8 @@
 import './MyInfo.css';
 import { Link } from "react-router-dom";
-import History from "../components/history/HealthHistory"
+import HelathHistory from "../components/history/HealthHistory";
+import dangerImage from '../assets/image/danger.png';
+import safeImage from '../assets/image/safe.png';
 
 function MyInfo(props) {
   return (
@@ -39,8 +41,19 @@ function MyInfo(props) {
           </tr>
         </table>
       </section>
+      <hr className="myinfo-divider"></hr>
       <section className="myinfo-history-section">
-
+        <p className="myinfo-history-title">나의 건강 기록</p>
+        <HelathHistory
+          mark={dangerImage}
+          date="2024. 03. 12."
+          detail="173cm  107kg  고혈압 없음  심장질환 없음  도심 거주  자영업자"
+        />
+        <HelathHistory
+          mark={safeImage}
+          date="2024. 03. 04."
+          detail="173cm  67kg  고혈압 없음  심장질환 보유  시골 거주  자영업자"
+        />
       </section>
     </main>
   )
