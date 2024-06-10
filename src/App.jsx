@@ -6,6 +6,7 @@ import Update from './routes/Update';
 import Post from './routes/Post';
 import MyInfo from './routes/MyInfo';
 import Hospital from './routes/Hospital';
+import Survey from './routes/Survey';
 import Navbar from './components/navbar/Navbar';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='/update' element={<Update />} />
         <Route path='/info' element={<MyInfo />} />
         <Route path='/hospital' element={<Hospital />} />
+        <Route path='/survey' element={<Survey />} />
       </Routes>
       <Navbar />
     </div>
