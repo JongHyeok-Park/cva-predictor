@@ -15,12 +15,13 @@ const getInfo = async () => {
   return res.json();
 }
 
-const putInfo = async () => {
+const putInfo = async (data) => {
   const res = await fetch(process.env.REACT_APP_API_URL + '/api/auth/info', {
     method: 'PUT',
     headers: {
       authorization: 'Bearer ' + getCookie('accessToken')
-    }
+    },
+    body: data
   });
 
   if (!res.ok) {
@@ -31,12 +32,13 @@ const putInfo = async () => {
   return res.text();
 }
 
-const postInfo = async () => {
+const postInfo = async (data) => {
   const res = await fetch(process.env.REACT_APP_API_URL + '/api/auth/info', {
     method: 'POST',
     headers: {
       authorization: 'Bearer ' + getCookie('accessToken')
-    }
+    },
+    body: data
   });
 
   if (!res.ok) {
