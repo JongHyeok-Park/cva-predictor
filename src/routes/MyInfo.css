@@ -1,6 +1,5 @@
 .myinfo {
   padding: 0 20px;
-  padding-top: 20px;
   min-height: 100dvh;
   margin: 0 auto;
 }
@@ -44,7 +43,7 @@
 
 .myinfo-update {
   margin-left: auto;
-  color: blue;
+  color: #0077B6;
   text-decoration: none;
   font-size: 16px;
 }
