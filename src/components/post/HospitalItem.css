@@ -15,6 +15,7 @@
   padding: 10px 15px;
   box-sizing: border-box;
   margin-right: 10px;
+  flex: none;
 }
 
 .hospital-type {
@@ -37,15 +38,20 @@
 }
 
 .hospital-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
   margin: 0;
   font-size: 20px;
   font-weight: 400;
+  overflow: hidden;
 }
 
 .hospital-item-distance {
   margin-left: auto;
   font-size: 14px;
   font-weight: 200;
+  flex: none;
 }
 
 .hospital-item-info-secondary {
@@ -57,12 +63,17 @@
   margin: 0;
   font-size: 16px;
   font-weight: 200;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .hospital-item-map-link {
   margin-left: auto;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   color: #0077B6;
+  flex: none;
 }

@@ -19,11 +19,13 @@
 .hospital-current-location-title {
   font-size: 14px;
   margin-right: 10px;
+  flex: none;
 }
 
 .hospital-current-location {
   display: -webkit-box;
   -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   flex-grow: 1;
   text-align: left;
@@ -37,6 +39,7 @@
   color: #0077B6;
   cursor: pointer;
   padding: 0;
+  flex: none;
 }
 
 .hospital-list-section {
