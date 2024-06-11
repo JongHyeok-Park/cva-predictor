@@ -1,0 +1,21 @@
+.survey {
+  padding: 0 20px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.survey-top-image {
+  z-index: 1;
+  position: absolute;
+}
+
+.survey-title {
+  font-size: 42px;
+  font-weight: 500;
+  z-index: 2;
+  position: relative;
+}
+
+.survey-text {
+}
