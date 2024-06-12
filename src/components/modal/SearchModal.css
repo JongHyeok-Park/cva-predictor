@@ -3,10 +3,20 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  padding: 100px;
+  padding: 20px 50px;
   background: white;
   border-radius: 20px;
   box-shadow: 0 0 10px #d9d9d9;
+  max-width: 500px;
+  width: 80vw;
+  box-sizing: border-box;
+}
+
+.search-modal-inner {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .address-list-wrapper {
@@ -16,4 +26,35 @@
   border: 1px solid #eee;
   list-style: none;
   margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.search-modal-title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.search-modal-input {
+  border: 1px solid #172C51;
+  border-radius: 13px;
+  padding: 5px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 14px;
+}
+
+.search-modal-cancle-btn {
+  background: #C4C4C4;
+  padding: 5px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
 }

@@ -1,17 +1,14 @@
-import { Link } from "react-router-dom";
 import './HospitalItem.css';
 import { useEffect, useState } from "react";
 import { getPlaceInfoApi } from "../../api/kakaoMapApi";
 
 function HospitalItem(props) {
-  const [lat, lng] = [128.604702568416, 35.8662511316347]
   const name = '경북대학교 병원';
   const [placeId, setPlaceId] = useState();
 
   useEffect(() => {
     getPlaceInfoApi(name)
       .then((data) => {
-        console.log(data.documents);
         setPlaceId(data.documents[0]?.id);
       })
       .catch((error) => {
@@ -31,8 +28,7 @@ function HospitalItem(props) {
         </div>
         <div className="hospital-item-info-secondary">
           <p className="hospital-item-address">대구광역시 중구 동덕로 130</p>
-          <a className="hospital-item-map-link" href={`https://map.kakao.com/link/map/${placeId}`} target="_blank">지도 보기 &gt;</a>
-          {/* <Link className="hospital-item-map-link" to={`/map?lat=${128.604702568416}&lng=${35.8662511316347}`}>지도 보기 &gt;</Link> */}
+          <a className="hospital-item-map-link" href={`https://map.kakao.com/link/map/${placeId}`} target="_blank" rel="noreferrer">지도 보기 &gt;</a>
         </div>
       </div>
     </article>

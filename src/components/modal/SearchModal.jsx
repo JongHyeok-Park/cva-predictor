@@ -21,26 +21,28 @@ function SearchModal(props) {
 
   return (
     <section className="search-modal">
-      <h4>주소를 입력해주세요.</h4>
-      <input type="text" onChange={(e) => {
-        setInput(e.target.value)
-      }}/>
-      {
-        addressList.length > 0 ? (
-          <ul className='address-list-wrapper'>
-            {
-              addressList.map((item, i) => {
-                return (
-                  <AddressItem address={item} setShowModal={props.setShowModal} key={i} />
-                )
-              })
-            }
-          </ul>
-        ) : null
-      }
-      <button type="button" onClick={() => {
-        props.setShowModal(false);
-      }}>취소</button>
+      <div className='search-modal-inner'>
+        <h4 className='search-modal-title'>주소를 입력해주세요.</h4>
+        <input className='search-modal-input' type="text" onChange={(e) => {
+          setInput(e.target.value)
+        }}/>
+        {
+          addressList.length > 0 ? (
+            <ul className='address-list-wrapper'>
+              {
+                addressList.map((item, i) => {
+                  return (
+                    <AddressItem address={item} setShowModal={props.setShowModal} key={i} />
+                  )
+                })
+              }
+            </ul>
+          ) : null
+        }
+        <button className='search-modal-cancle-btn' type="button" onClick={() => {
+          props.setShowModal(false);
+        }}>취소</button>
+      </div>
     </section>
   )
 }
