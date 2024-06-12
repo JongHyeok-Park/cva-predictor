@@ -1,0 +1,79 @@
+.hospital-item {
+  display: flex;
+  height: 70px;
+  margin-bottom: 13px;
+}
+
+.hospital-item-type-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #ed7d31;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  flex: none;
+}
+
+.hospital-type {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.hospital-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.hospital-item-info-main {
+  display: flex;
+  align-items: center;
+}
+
+.hospital-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.hospital-item-distance {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 200;
+  flex: none;
+}
+
+.hospital-item-info-secondary {
+  display: flex;
+  align-items: center;
+}
+
+.hospital-item-address {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 200;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hospital-item-map-link {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #0077B6;
+  flex: none;
+}

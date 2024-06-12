@@ -1,0 +1,48 @@
+.hospital {
+  max-width: 700px;
+  margin: auto;
+}
+
+.hospital-address-section {
+  margin: 25px 0;
+  padding: 0 20px;
+}
+
+.hospital-address-wrapper {
+  border: 1px solid #172C51;
+  border-radius: 90px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.hospital-current-location-title {
+  font-size: 14px;
+  margin-right: 10px;
+  flex: none;
+}
+
+.hospital-current-location {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.hospital-current-location-btn {
+  border: none;
+  background: none;
+  color: #0077B6;
+  cursor: pointer;
+  padding: 0;
+  flex: none;
+}
+
+.hospital-list-section {
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
