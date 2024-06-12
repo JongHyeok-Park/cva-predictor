@@ -1,0 +1,19 @@
+.search-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 100px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #d9d9d9;
+}
+
+.address-list-wrapper {
+  position: absolute;
+  background: white;
+  padding: 0;
+  border: 1px solid #eee;
+  list-style: none;
+  margin: 0;
+}

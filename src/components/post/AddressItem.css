@@ -1,0 +1,8 @@
+.address-item {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.address-item:hover {
+  background-color: #eee;
+}
