@@ -1,0 +1,10 @@
+.address-item {
+  font-size: 12px;
+  cursor: pointer;
+  width: 100%;
+  padding: 2px 10px;
+}
+
+.address-item:hover {
+  background-color: #eee;
+}
