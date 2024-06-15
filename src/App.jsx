@@ -7,6 +7,7 @@ import Post from './routes/Post';
 import MyInfo from './routes/MyInfo';
 import Hospital from './routes/Hospital';
 import Navbar from './components/navbar/Navbar';
+import MapView from './routes/MapView';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/update' element={<Update />} />
         <Route path='/info' element={<MyInfo />} />
         <Route path='/hospital' element={<Hospital />} />
+        <Route path='/map' element={<MapView />} />
       </Routes>
       <Navbar />
     </div>
