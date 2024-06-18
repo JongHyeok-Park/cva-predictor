@@ -11,6 +11,24 @@
   height: 75px;
   float: left;
   margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  border-radius: 100%;
+}
+
+.history-mark.good {
+  background-color: #A9D18E;
+}
+
+.history-mark.caution {
+  background-color: #F59859;
+}
+.history-mark.danger {
+  background-color: #D2544A;
 }
 
 .history-date {

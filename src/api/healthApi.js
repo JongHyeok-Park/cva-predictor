@@ -49,7 +49,7 @@ const deleteHealthInfo = async (id) => {
 }
 
 const getHealthInfoList = async (pageNum, pageSize) => {
-  const res = await fetch(process.env.REACT_APP_API_URL + `/api/userHealth?pageNum=${pageNum}&pageSize=${pageSize}`, {
+  const res = await fetch(process.env.REACT_APP_API_URL + `/api/userHealth/list?pageNumber=${pageNum}&pageSize=${pageSize}`, {
     headers: {
       authorization: 'Bearer ' + getCookie('accessToken')
     }

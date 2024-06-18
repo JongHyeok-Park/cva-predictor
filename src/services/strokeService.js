@@ -20,9 +20,9 @@ const formatFactorList = (stroke) => {
 const calcStrokeToText = (stroke) => {
   let result;
 
-  if (stroke.probability < 0.4) {
+  if (stroke?.probability < 0.4) {
     result = '양호';
-  } else if (stroke.probability < 0.6) {
+  } else if (stroke?.probability < 0.6) {
     result = '주의';
   } else {
     result = '위험';

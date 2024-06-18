@@ -1,53 +1,12 @@
 import './Main.css';
 import ColumnPost from "../components/post/ColumnPost";
-import { useEffect, useState } from 'react';
-import { getHealthInfoList } from '../api/healthApi';
-import { getUserInfo } from '../api/authApi';
-import { getStroke } from '../api/strokeApi';
-import { calcStrokeToText, formatFactorList } from '../services/strokeService';
+import useStrokeInfo from '../hooks/useStrokeInfo';
+import useUserInfo from '../hooks/useUserInfo';
 
 function Main(props) {
-  const [healthInfo, setHealthInfo] = useState({});
-  const [userInfo, setUserInfo] = useState({});
-  const [strokeInfo, setStrokeInfo] = useState({});
-  const [factorList, setFactorList] = useState([]);
-  const [result, setResult] = useState('');
+  const [strokeInfo, factorList, result] = useStrokeInfo();
+  const [userInfo, setUserInfo] = useUserInfo();
   
-  useEffect(() => {
-    getUserInfo()
-      .then((data) => {
-        setUserInfo(data);
-      })
-      .catch((error) => {
-        alert(error.message);
-      })
-
-    getHealthInfoList(0, 1)
-      .then((healthData) => {
-        let recentData;
-        
-        if (healthData.length > 1) {
-          recentData = healthData[0];
-        } else {
-          recentData = healthData;
-        }
-
-        setHealthInfo(recentData);
-        getStroke(recentData.id)
-          .then((strokeData) => {
-            setStrokeInfo(strokeData);
-          })
-      })
-      .catch((error) => {
-        alert(error.message);
-      })
-  }, []);
-
-  useEffect(() => {
-    setFactorList(formatFactorList(strokeInfo));
-    setResult(calcStrokeToText(strokeInfo));
-  }, [strokeInfo]);
-
   return (
     <main className="main">
       <section className="main-percentage-section">
