@@ -62,3 +62,5 @@ const getHealthInfoList = async (pageNum, pageSize) => {
 
   return res.json();
 }
+
+export { getHealthInfo, postHealthInfo, deleteHealthInfo, getHealthInfoList };
