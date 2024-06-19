@@ -28,29 +28,59 @@ function Survey(props) {
           <span className="survey-form-unit">kg</span>
         </div>
         <div className="survey-form-group">
-          <label className="survey-form-label" htmlFor="gender">성별</label>
-          <input className="survey-form-radio" type="radio" id="gender" name="gender" value="male" required />남성
-          <input classname="survey-form-radio" type="radio" id="gender" name="gender" value="female" required />여성
+          <h3 className="survey-form-head">성별</h3>
+          <label htmlFor="male">
+            <input className="survey-form-radio" type="radio" id="male" name="gender" value="male" required />
+            남성
+          </label>
+          <label htmlFor="female">
+            <input className="survey-form-radio" type="radio" id="female" name="gender" value="female" required />
+            여성
+          </label>
         </div>
         <div className="survey-form-group">
-          <label className="survey-form-label" htmlFor="solo">결혼 여부</label>
-          <input className="survey-form-radio" type="radio" id="solo" name="solo" value="true" required />미혼
-          <input classname="survey-form-radio" type="radio" id="solo" name="solo" value="false" required />기혼
+          <h3 className="survey-form-head">결혼 여부</h3>
+          <label htmlFor="solo-yes">
+            <input className="survey-form-radio" type="radio" id="solo-yes" name="solo" value="true" required />
+            미혼
+          </label>
+          <label htmlFor="married">
+            <input className="survey-form-radio" type="radio" id="solo-no" name="solo" value="false" required />
+            기혼
+          </label>
         </div>
         <div className="survey-form-group">
-          <label className="survey-form-label" htmlFor="city">거주 지역</label>
-          <input className="survey-form-radio" type="radio" id="city" name="city" value="true" required />도심
-          <input classname="survey-form-radio" type="radio" id="city" name="city" value="false" required />시외
+          <h3 className="survey-form-head">거주 지역</h3>
+          <label htmlFor="city-yes">
+            <input className="survey-form-radio" type="radio" id="city-yes" name="city" value="true" required />
+            도심
+          </label>
+          <label htmlFor="city-no">
+            <input className="survey-form-radio" type="radio" id="city-no" name="city" value="false" required />
+            시외
+          </label>
         </div>
         <div className="survey-form-group">
-          <label className="survey-form-label" htmlFor="highBloodPressure">고혈압</label>
-          <input className="survey-form-radio" type="radio" id="highBloodPressure" name="highBloodPressure" value="true" required />있음
-          <input classname="survey-form-radio" type="radio" id="highBloodPressure" name="highBloodPressure" value="false" required />없음
+          <h3 className="survey-form-head">고혈압</h3>
+          <label htmlFor="highBloodPressure-yes">
+            <input className="survey-form-radio" type="radio" id="highBloodPressure-yes" name="highBloodPressure" value="true" required />
+            있음
+          </label>
+          <label htmlFor="highBloodPressure-no">
+            <input className="survey-form-radio" type="radio" id="highBloodPressure-no" name="highBloodPressure" value="false" required />
+            없음
+          </label>
         </div>
         <div className="survey-form-group">
-          <label className="survey-form-label" htmlFor="heartDisease">심장 질환</label>
-          <input className="survey-form-radio" type="radio" id="heartDisease" name="heartDisease" value="true" required />있음
-          <input classname="survey-form-radio" type="radio" id="heartDisease" name="heartDisease" value="false" required />없음
+          <h3 className="survey-form-head">심장 질환</h3>
+          <label htmlFor="heartDisease-yes">
+            <input className="survey-form-radio" type="radio" id="heartDisease-yes" name="heartDisease" value="true" required />
+            있음
+          </label>
+          <label htmlFor="heartDisease-no">
+              <input className="survey-form-radio" type="radio" id="heartDisease-no" name="heartDisease" value="false" required />
+            없음
+          </label>
         </div>
         <div className="survey-form-group">
           <label className="survey-form-label" htmlFor="glucose">혈당</label>
