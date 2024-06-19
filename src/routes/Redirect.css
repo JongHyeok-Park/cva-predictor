@@ -1,0 +1,21 @@
+.redirect {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.redirect-spinner {
+  animation: spin infinite 0.5s linear;
+}

@@ -1,17 +1,27 @@
 import { useEffect, useState } from "react";
 import { getStrokeList } from "../api/strokeApi";
+import { checkLogin } from "../services/authService";
+import { useNavigate } from "react-router-dom";
 
 function useStrokeInfoList() {
   const [strokeInfoList, setStrokeInfoList] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    getStrokeList()
-      .then((data) => {
-        setStrokeInfoList(data);
+    checkLogin()
+      .then(() => {
+        getStrokeList()
+          .then((data) => {
+            setStrokeInfoList(data);
+          })
+          .catch((error) => {
+            alert(error.message);
+          })
       })
-      .catch((error) => {
-        alert(error.message);
+      .catch(() => {
+        navigate('/login');
       })
+    
   }, []);
 
   return strokeInfoList;
