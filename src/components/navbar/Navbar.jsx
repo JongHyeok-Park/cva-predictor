@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import home_icon from "../../assets/image/home_icon.png"
 import hospital_icon from "../../assets/image/hospital_icon.png"

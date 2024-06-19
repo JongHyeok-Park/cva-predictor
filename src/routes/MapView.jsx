@@ -14,7 +14,7 @@ function MapView(props) {
   }
 
   return (
-    <main className="map-wrapper">
+    <main className="map-wrapper" style={{paddingBottom: '91px'}}>
       <Map 
         center={center}
         isPanto={true}

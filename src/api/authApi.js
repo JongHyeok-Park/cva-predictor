@@ -1,5 +1,16 @@
 import { getCookie } from "../utils/cookieManage"
 
+const getLogin = async (code) => {
+  let res = await fetch(process.env.REACT_APP_API_URL + '/api/auth/local-login?code=' + code);
+
+  if (!res.ok) {
+    let message = await res.text();
+    throw new Error(message);
+  }
+
+  return res.json();
+}
+
 const patchLogin = async () => {
   let res = await fetch(process.env.REACT_APP_API_URL + '/api/auth/login', {
     method: 'PATCH',
@@ -13,7 +24,7 @@ const patchLogin = async () => {
     throw new Error(message);
   }
 
-  return await res.text();
+  return res.json();
 }
 
 const getUserInfo = async () => {
@@ -45,7 +56,7 @@ const putUserInfo = async (data) => {
     throw new Error(message);
   }
 
-  return await res.text();
+  return res.text();
 }
 
 const postUserInfo = async (data) => {
@@ -62,7 +73,7 @@ const postUserInfo = async (data) => {
     throw new Error(message);
   }
 
-  return await res.text();
+  return res.text();
 }
 
-export { patchLogin, getUserInfo, putUserInfo, postUserInfo };
+export { getLogin, patchLogin, getUserInfo, putUserInfo, postUserInfo };
