@@ -106,6 +106,10 @@ function Survey(props) {
             <option className="survey-form-option" value="Never_worked">무직</option>
           </select>
         </div>
+        <div className="survey-form-group">
+          <input className="survey-form-checkbox" type="checkbox" id="acceptPolicy" name="acceptPolicy" />
+          <label className="survey-policy-text" htmlFor="acceptPolicy">개인정보 수집·이용에 동의합니다.</label>
+        </div>
       </form>
     </main>
   )
