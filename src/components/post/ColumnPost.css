@@ -22,6 +22,11 @@
   margin-right: 10px;
 }
 
+.column-post-image > img {
+  width: 100%;
+  height: 100%;
+}
+
 .column-post-info-title {
   margin: 0;
   text-align: left;
