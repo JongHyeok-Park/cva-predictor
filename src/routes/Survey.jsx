@@ -110,6 +110,7 @@ function Survey(props) {
           <input className="survey-form-checkbox" type="checkbox" id="acceptPolicy" name="acceptPolicy" />
           <label className="survey-policy-text" htmlFor="acceptPolicy">개인정보 수집·이용에 동의합니다.</label>
         </div>
+        <button type="submit" className="survey-form-button">저장</button>
       </form>
     </main>
   )

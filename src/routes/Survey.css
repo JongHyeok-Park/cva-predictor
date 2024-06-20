@@ -131,3 +131,16 @@ input[type="number"] {
   font-weight: 300;
   margin-top: 22px;
 }
+
+.survey-form-button {
+  width: 97px;
+  height: 33px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  background-color: #0077B6;
+  border: none;
+  border-radius: 5px;
+  margin-top: 29px;
+  cursor: pointer;
+}
