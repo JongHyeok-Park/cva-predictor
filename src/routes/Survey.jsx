@@ -44,7 +44,7 @@ function Survey(props) {
             <input className="survey-form-radio" type="radio" id="solo-yes" name="solo" value="true" required />
             미혼
           </label>
-          <label htmlFor="married">
+          <label htmlFor="solo-no">
             <input className="survey-form-radio" type="radio" id="solo-no" name="solo" value="false" required />
             기혼
           </label>
