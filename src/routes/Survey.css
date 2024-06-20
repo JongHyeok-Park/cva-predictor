@@ -142,5 +142,14 @@ input[type="number"] {
   border: none;
   border-radius: 5px;
   margin-top: 29px;
+  margin-bottom: 120px;
   cursor: pointer;
+}
+
+.survey-bottom-image {
+  margin-top: 33px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }

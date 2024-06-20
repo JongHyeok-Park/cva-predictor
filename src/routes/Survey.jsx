@@ -19,12 +19,12 @@ function Survey(props) {
         </div>
         <div className="survey-form-group">
           <label className="survey-form-label" htmlFor="height">키</label>
-          <input className="survey-form-number" type="number" id="height" name="height" required />
+          <input className="survey-form-number" type="number" id="height" name="height" step="0.1" required />
           <span className="survey-form-unit">cm</span>
         </div>
         <div className="survey-form-group">
           <label className="survey-form-label" htmlFor="weight">몸무게</label>
-          <input className="survey-form-number" type="number" id="weight" name="weight" required />
+          <input className="survey-form-number" type="number" id="weight" name="weight" step="0.1" required />
           <span className="survey-form-unit">kg</span>
         </div>
         <div className="survey-form-group">
@@ -84,7 +84,7 @@ function Survey(props) {
         </div>
         <div className="survey-form-group">
           <label className="survey-form-label" htmlFor="glucose">혈당</label>
-          <input className="survey-form-number" type="number" id="glucose" name="glucose" required />
+          <input className="survey-form-number" type="number" id="glucose" name="glucose" step="0.1" required />
           <span className="survey-form-unit">mg/dl</span>
         </div>
         <div className="survey-form-group">
@@ -112,6 +112,7 @@ function Survey(props) {
         </div>
         <button type="submit" className="survey-form-button">저장</button>
       </form>
+      <img className="survey-bottom-image" src={bottomImage} alt="하단 디자인 이미지" />
     </main>
   )
 }
