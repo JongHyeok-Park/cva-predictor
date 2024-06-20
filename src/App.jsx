@@ -6,6 +6,7 @@ import Update from './routes/Update';
 import Post from './routes/Post';
 import MyInfo from './routes/MyInfo';
 import Hospital from './routes/Hospital';
+import Survey from './routes/Survey';
 import Navbar from './components/navbar/Navbar';
 import MapView from './routes/MapView';
 import { useEffect, useState } from 'react';
@@ -37,6 +38,7 @@ function App() {
         <Route path='/update' element={<Update />} />
         <Route path='/info' element={<MyInfo />} />
         <Route path='/hospital' element={<Hospital />} />
+        <Route path='/survey' element={<Survey />} />
         <Route path='/map' element={<MapView />} />
         <Route path='/redirect' element={<Redirect />} />
         <Route path='*' element={<div>존재하지 않는 페이지입니다.</div>} />
