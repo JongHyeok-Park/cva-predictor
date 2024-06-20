@@ -1,0 +1,151 @@
+.update {
+  padding: 0;
+  min-height: 100dvh;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.update-top-image {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.update-title {
+  font-size: 42px;
+  font-weight: 500;
+  color: white;
+  z-index: 2;
+  position: relative;
+  margin-top: 0px;
+  left: 50%;
+  transform: translate(-50%, 80%);
+}
+
+.update-text {
+  margin-top: 110px;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.update-form {
+  width: 356px;
+  font-size: 25px;
+  font-weight: 300;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.update-form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.update-form-head {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  width: 98px;
+  margin: 0;
+  margin-right: 5px;
+}
+
+.update-form-label {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  width: 98px;
+  margin-right: 5px;
+}
+
+.update-form-text,
+.update-form-date,
+.update-form-number,
+.update-form-select {
+  width: 238px;
+  height: 33px;
+  border-radius: 5px;
+  font-size: 17px;
+  border-width: 2px;
+  padding: auto;
+  padding-left: 10px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.update-form-number {
+  margin-right: 5px;
+  text-align: right;
+  padding-right: 60px;
+}
+
+.update-form-unit {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 17px;
+  color: #999;
+  pointer-events: none;
+}
+
+.update-form-radio {
+  margin-right: 20px;
+  width: 23px;
+  height: 23px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.update-form-reset,
+.update-form-submit {
+  width: 97px;
+  height: 33px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  margin-top: 29px;
+  margin-bottom: 120px;
+  cursor: pointer;
+}
+
+.update-form-reset {
+  background-color: #C4C4C4;
+}
+
+.update-form-submit {
+  background-color: #0077B6;
+}
+
+.update-bottom-image {
+  margin-top: 33px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
