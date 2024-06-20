@@ -1,14 +1,14 @@
 .myinfo {
-  padding: 0 20px;
-  padding-top: 20px;
   min-height: 100dvh;
   margin: 0 auto;
+  padding-bottom: 91px;
 }
 
 .myinfo-current-section {
   font-size: 18px;
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .myinfo-current-section h1 {
@@ -44,7 +44,7 @@
 
 .myinfo-update {
   margin-left: auto;
-  color: blue;
+  color: #0077B6;
   text-decoration: none;
   font-size: 16px;
 }
@@ -78,6 +78,7 @@
 .myinfo-history-section {
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .myinfo-history-title {
