@@ -4,7 +4,7 @@ import { deleteCookie, getCookie, setCookie } from "../utils/cookieManage"
 const checkLogin = async () => {
   const accessToken = getCookie('accessToken');
   const refreshToken = getCookie('refreshToken');
-  const accessTime = 2 * 60;
+  const accessTime = (2 * 60) - 10;
   const refreshTime = 7 * 24 * 60;
 
   if (accessToken) {

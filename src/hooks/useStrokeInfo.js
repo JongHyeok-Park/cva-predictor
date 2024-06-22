@@ -3,7 +3,7 @@ import useHealthInfo from "./useHealthInfo";
 import { getStroke } from "../api/strokeApi";
 import { calcStrokeToText, formatFactorList } from "../services/strokeService";
 import { checkLogin } from "../services/authService";
-import { useNavigate } from "react-router-dom";
+import { useAsyncError, useNavigate } from "react-router-dom";
 
 function useStrokeInfo() {
   const [strokeInfo, setStrokeInfo] = useState({});
@@ -11,19 +11,28 @@ function useStrokeInfo() {
   const [result, setResult] = useState('');
   const [healthInfo, setHealthInfo] = useHealthInfo();
   const navigate = useNavigate();
+  const [flag, setFlag] = useState(false);
 
   useEffect(() => {
     checkLogin()
       .then(() => {
-        if (healthInfo) {
-          getStroke(healthInfo[0].id)
-          .then((data) => {
-            setStrokeInfo(data);
-          })
-          .catch((error) => {
-            alert(error.message);
-          })
-        }
+        for (let i = 0; i < 10; i++) {
+          if (!flag) {
+            setTimeout(() => {
+              if (healthInfo && !flag) {
+                getStroke(healthInfo[0].id)
+                .then((data) => {
+                  setStrokeInfo(data);
+                  setFlag(true);
+                  })
+                .catch((error) => {
+                  console.log(error.message);
+                })
+              }
+            }, 500 * i);
+          }
+          
+        }        
       })
       .catch(() => {
         navigate('/login');

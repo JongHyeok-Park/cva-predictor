@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
-import useStrokeInfo from "./useStrokeInfo";
 import { getHealthInfo, getHealthInfoList } from "../api/healthColumnApi";
+import { checkLogin } from "../services/authService";
+import { useNavigate } from "react-router-dom";
+import useHealthInfo from "./useHealthInfo";
 
 function useColumnList() {
-  const [strokeInfo] = useStrokeInfo();
+  const [healthInfo] = useHealthInfo();
   const [columnList, setColumnList] = useState([]);
   const [beforeColumnList, setBeforeColumnList] = useState([]);
+  const navigate = useNavigate();
 
   const matchColumn = async () => {
     let list = []
@@ -25,16 +28,22 @@ function useColumnList() {
   }
 
   useEffect(() => {
-    if (strokeInfo) {
-      getHealthInfoList()
-      .then((resHealthColumn) => {
-        setBeforeColumnList(resHealthColumn);
+    checkLogin()
+      .then(() => {
+        if (healthInfo) {
+          getHealthInfoList()
+          .then((resHealthColumn) => {
+            setBeforeColumnList(resHealthColumn);
+          })
+          .catch((error) => {
+            alert(error.message);
+          })
+        }
       })
-      .catch((error) => {
-        alert(error.message);
+      .catch(() => {
+        navigate('/login');
       })
-    }
-  }, []);
+  }, [healthInfo]);
 
   useEffect(() => {
     matchColumn();

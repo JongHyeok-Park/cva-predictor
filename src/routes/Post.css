@@ -32,6 +32,7 @@
 }
 
 .post-header-title {
+  margin: auto;
   margin-top: 0;
   margin-bottom: 5px;
   font-size: 20px;

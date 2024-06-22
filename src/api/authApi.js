@@ -1,4 +1,4 @@
-import { getCookie } from "../utils/cookieManage"
+import { deleteCookie, getCookie } from "../utils/cookieManage"
 
 const getLogin = async (code) => {
   let res = await fetch(process.env.REACT_APP_API_URL + '/api/auth/local-login?code=' + code);
@@ -46,7 +46,8 @@ const putUserInfo = async (data) => {
   let res = await fetch(process.env.REACT_APP_API_URL + '/api/auth/info', {
     method: 'PUT',
     headers: {
-      'authorization': 'Bearer ' + getCookie('accessToken')
+      'authorization': 'Bearer ' + getCookie('accessToken'),
+      'Content-Type': 'application/json; charset=utf-8'
     },
     body: data
   });
@@ -63,7 +64,8 @@ const postUserInfo = async (data) => {
   let res = await fetch(process.env.REACT_APP_API_URL + '/api/auth/info', {
     method: 'POST',
     headers: {
-      'authorization': 'Bearer ' + getCookie('accessToken')
+      'authorization': 'Bearer ' + getCookie('accessToken'),
+      'Content-Type': 'application/json; charset=utf-8'
     },
     body: data
   });
