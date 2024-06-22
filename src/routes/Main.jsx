@@ -2,10 +2,12 @@ import './Main.css';
 import ColumnPost from "../components/post/ColumnPost";
 import useStrokeInfo from '../hooks/useStrokeInfo';
 import useUserInfo from '../hooks/useUserInfo';
+import useColumnList from '../hooks/useColumnList';
 
 function Main(props) {
   const [strokeInfo, factorList, result] = useStrokeInfo();
   const [userInfo, setUserInfo] = useUserInfo();
+  const columnList = useColumnList();
   
   return (
     <main className="main">
@@ -33,14 +35,17 @@ function Main(props) {
       </section>
       <section className="main-column-container">
         <h3 className="main-column-container-title"><span className="main-user-name">{userInfo.name}</span>님에게 추천드리는 조언 칼럼</h3>
-        <ColumnPost id={1} />
-        <ColumnPost id={2} />
-        <ColumnPost id={3} />
-        <ColumnPost id={4} />
-        <ColumnPost id={5} />
-        <ColumnPost id={6} />
-        <ColumnPost id={7} />
-        <ColumnPost id={8} />
+        {
+          columnList?.map((item, i) => {
+            return <ColumnPost 
+                      key={i} 
+                      id={item.id}
+                      title={item.title}
+                      imagePath={item.photo}
+                      content={item.content}
+                      url={item.url} />
+          })
+        }
       </section>
       <div className={"main-background " + (result === '양호' ? 'good' : result === '주의' ? 'caution' : 'danger')}></div>
     </main>
