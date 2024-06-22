@@ -2,7 +2,6 @@ import './HospitalItem.css';
 import { Link } from 'react-router-dom';
 
 function HospitalItem(props) {
-  const name = '경북대학교 병원';
 
   return (
     <article className="hospital-item">
@@ -11,12 +10,12 @@ function HospitalItem(props) {
       </div>
       <div className="hospital-item-info">
         <div className="hospital-item-info-main">
-          <h4 className="hospital-name">{name}</h4>
-          <span className="hospital-item-distance">230m</span>
+          <h4 className="hospital-name">{props.name}</h4>
+          <span className="hospital-item-distance">{props.contact}</span>
         </div>
         <div className="hospital-item-info-secondary">
-          <p className="hospital-item-address">대구광역시 중구 동덕로 130</p>
-          <Link to={'/map?lat=35.8662511316347&lng=128.604702568416'} className="hospital-item-map-link">지도 보기 &gt;</Link>
+          <p className="hospital-item-address">{props.address}</p>
+          <Link to={`/map?lat=${props.latitude}&lng=${props.longtitude}`} className="hospital-item-map-link">지도 보기 &gt;</Link>
         </div>
       </div>
     </article>

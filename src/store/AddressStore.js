@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 const useAddressStore = create((set) => ({
-  address: {},
+  address: null,
   setAddress: (newAddress) => set({ address: newAddress }),
 }))
 
