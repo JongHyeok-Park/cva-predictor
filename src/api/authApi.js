@@ -1,4 +1,4 @@
-import { getCookie } from "../utils/cookieManage"
+import { deleteCookie, getCookie } from "../utils/cookieManage"
 
 const getLogin = async (code) => {
   let res = await fetch(process.env.REACT_APP_API_URL + '/api/auth/local-login?code=' + code);

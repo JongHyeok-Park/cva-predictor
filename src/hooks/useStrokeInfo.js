@@ -18,18 +18,15 @@ function useStrokeInfo() {
       .then(() => {
         for (let i = 0; i < 10; i++) {
           if (!flag) {
-            const timer = setTimeout(() => {
+            setTimeout(() => {
               if (healthInfo && !flag) {
                 getStroke(healthInfo[0].id)
                 .then((data) => {
                   setStrokeInfo(data);
-                  console.log(data);
                   setFlag(true);
-                  clearTimeout(timer);
                   })
                 .catch((error) => {
                   console.log(error.message);
-                  console.log('시도');
                 })
               }
             }, 500 * i);
