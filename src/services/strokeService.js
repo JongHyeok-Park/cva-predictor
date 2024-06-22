@@ -1,8 +1,11 @@
 const formatFactorList = (stroke) => {
   let factorList = [];
 
-  if (stroke.isWeight) {
+  if (stroke.isHighWeight) {
     factorList.push("높은 체중");
+  }
+  if (stroke.isLowWeight) {
+    factorList.push("낮은 체중");
   }
   if (stroke.isAge) {
     factorList.push("높은 연령대");

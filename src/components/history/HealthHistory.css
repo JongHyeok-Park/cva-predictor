@@ -18,6 +18,7 @@
   font-weight: bold;
   color: white;
   border-radius: 100%;
+  flex: none;
 }
 
 .history-mark.good {
