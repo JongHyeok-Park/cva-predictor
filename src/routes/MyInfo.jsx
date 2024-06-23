@@ -2,7 +2,6 @@ import './MyInfo.css';
 import { Link } from "react-router-dom";
 import Top from "../components/top/Top";
 import HelathHistory from "../components/history/HealthHistory";
-import dangerImage from '../assets/image/danger.png';
 import useUserInfo from '../hooks/useUserInfo';
 import useHealthInfoList from '../hooks/useHealthInfoList';
 import useStrokeInfoList from '../hooks/useStrokeInfoList';
@@ -12,6 +11,15 @@ function MyInfo(props) {
   const [userInfo] = useUserInfo();
   const [healthInfoList] = useHealthInfoList();
   const strokeInfoList = useStrokeInfoList();
+
+  const getAge = (birthday) => {
+    const thisDate = new Date
+    const birthDate = new Date(birthday);
+    const thisYear = thisDate.getFullYear();
+    const birthYear = birthDate.getFullYear();
+
+    return thisYear - birthYear + 1;
+  }
 
   return (
     <main className="myinfo">
@@ -27,7 +35,7 @@ function MyInfo(props) {
           <tbody>
             <tr>
               <th>나이</th>
-              <td>24세</td>
+              <td>{getAge(userInfo?.birthday)}세</td>
               <th>고혈압</th>
               <td>{healthInfoList[0]?.highBloodPressure ? '있음' : '없음'}</td>
             </tr>
@@ -63,7 +71,7 @@ function MyInfo(props) {
                 mark={calcStrokeToText(strokeInfoList.find((strokeItem) => strokeItem.id === item.id))}
                 date={item.createdAt}
                 detail={item.height + 'cm ' + item.weight + 'kg ' + '고혈압 ' + (item.highBloodPressure ? '있음 ' : '없음 ') +  '심장질환 ' + 
-                (item.heartDisease ? '있음 ' : '없음 ') +  '도심 거주 ' + item.job}
+                (item.heartDisease ? '있음 ' : '없음 ') + (item.city ? '도심 거주 ' : '시외 거주 ') + item.job}
               />
             }
           }) : "기록이 없습니다."
