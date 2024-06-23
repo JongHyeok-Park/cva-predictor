@@ -138,7 +138,7 @@ function Update(props) {
     const inputUserInfo = JSON.stringify({
       name: name,
       birthday: birthday,
-      gender: Boolean(gender)
+      gender: isTrue(gender)
     });
 
     const inputUserHealth = JSON.stringify({

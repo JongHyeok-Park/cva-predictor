@@ -91,6 +91,10 @@ function Survey(props) {
   const handleSubmitBtn = (e) => {
     e.preventDefault();
 
+    if (!privacy) {
+      alert('개인정보 수집·이용에 동의해주세요.');
+      return;
+    }
     if (!name) {
       alert('이름을 입력해주세요.');
       return;
