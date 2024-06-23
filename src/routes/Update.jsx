@@ -3,7 +3,7 @@ import topImage from "../assets/image/survey_top.png";
 import bottomImage from "../assets/image/survey_bottom.png";
 import { useEffect, useState } from 'react';
 import { createdDateNow } from '../services/dateService';
-import { getUserInfo, postUserInfo } from '../api/authApi';
+import { getUserInfo, putUserInfo } from '../api/authApi';
 import { postHealthInfo } from '../api/healthApi';
 import { useNavigate } from 'react-router-dom';
 import { checkLogin } from '../services/authService';
@@ -154,7 +154,7 @@ function Update(props) {
       smoking_status: smokeStatus
     })
     
-    postUserInfo(inputUserInfo)
+    putUserInfo(inputUserInfo)
     .then(() => {
       postHealthInfo(inputUserHealth)
       .then(() => {
@@ -185,7 +185,7 @@ function Update(props) {
           alert(err.message);
         })
       })
-  })
+  }, []);
 
   return (
     <main className="update">
@@ -195,21 +195,11 @@ function Update(props) {
       <form className="update-form">
         <div className="update-form-group">
           <label className="update-form-label" htmlFor="name">이름</label>
-          {
-            name ? 
-            <input className="update-form-text" type="text" id="username" name="username" value={name} required onChange={handleChangeName} /> :
-            <input className="update-form-text" type="text" id="username" name="username" required onChange={handleChangeName} />
-          }
-          
+          <input className="update-form-text" type="text" id="username" name="username" required onChange={handleChangeName} />
         </div>
         <div className="update-form-group">
           <label className="update-form-label" htmlFor="birthdate">생년월일</label>
-          {
-            birthday ? 
-            <input className="update-form-date" type="date" id="brithdate" name="birthdate" value={birthday} required onChange={handleChangeBirthday} /> :
-            <input className="update-form-date" type="date" id="brithdate" name="birthdate" required onChange={handleChangeBirthday} />
-          }
-          
+          <input className="update-form-date" type="date" id="brithdate" name="birthdate" required onChange={handleChangeBirthday} />
         </div>
         <div className="update-form-group">
           <label className="update-form-label" htmlFor="height">키</label>
