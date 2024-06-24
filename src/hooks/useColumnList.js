@@ -30,7 +30,7 @@ function useColumnList() {
   useEffect(() => {
     checkLogin()
       .then(() => {
-        if (healthInfo) {
+        if (healthInfo && healthInfo[0]?.id) {
           getHealthInfoList()
           .then((resHealthColumn) => {
             setBeforeColumnList(resHealthColumn);
@@ -40,7 +40,8 @@ function useColumnList() {
           })
         }
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log(err)
         navigate('/login');
       })
   }, [healthInfo]);

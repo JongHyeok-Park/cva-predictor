@@ -21,7 +21,6 @@ function useHealthInfoList() {
             } else if (healthData.length === 1) {
               healthData.createdAt = dateFormat(healthData.createdAt);
             } else {
-              alert('건강 정보가 없습니다.');
               navigate('/survey');
             }
             

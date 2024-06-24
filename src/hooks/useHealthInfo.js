@@ -18,7 +18,6 @@ function useHealthInfo() {
             } else if (healthData.length === 1) {
               recentData = healthData;
             } else {
-              alert('건강 정보가 없습니다.');
               navigate('/survey');
             }
 
