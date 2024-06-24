@@ -18,7 +18,7 @@ function Hospital(props) {
 
   useEffect(() => {
     if (address) {
-      getHospital(address.x, address.y)
+      getHospital(address.y, address.x)
         .then((data) => {
           let newHospitalList = hospitalList.concat(data);
           setHospitalList(newHospitalList);

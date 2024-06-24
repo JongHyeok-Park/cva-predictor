@@ -41,7 +41,6 @@ function useColumnList() {
         }
       })
       .catch((err) => {
-        console.log(err)
         navigate('/login');
       })
   }, [healthInfo]);
